@@ -19,22 +19,20 @@
                         @csrf
                         <div class="form-group">
                             <label for="question-title"> Question Title </label>
-                            <input type="text" name="title" id="question-title" class="form-control {{ $errors->has('title') ? 'is-invalid' : ' ' }}">
+                        <input type="text" name="title" id="question-title" value="{{ old('title') }}" class="form-control {{ $errors->has('title') ? 'is-invalid' : ' ' }}">
                         </div>
-                        @if ($errors->has(
-                            'title'))
-                            <div class="invalid-feedback">
-                                 <strong> {{ $errors->first('title') }}</strong>
+                        @if ($errors->has('title'))
+                            <div class="invalid-feedback" role="alert">
+                                <strong> {{ $errors->first('title') }} </strong>
                             </div>
                         @endif
                         <div class="form-group">
                             <label for="question-body"> Question Body </label>
-                            <textarea name="body" id="question-body" class="form-control {{ $errors->has('body') ? 'is-invalid' : ' ' }}" rows="10"></textarea>
+                            <textarea name="body" id="question-body" class="form-control {{ $errors->has('body') ? 'is-invalid' : ' ' }}" rows="10">{{ old('title') }}</textarea>
                         </div>
-                        @if ($errors->has(
-                            'body'))
-                            <div class="invalid-feedback">
-                                <strong> {{ $errors->first('body') }}</strong>
+                        @if ($errors->has('body'))
+                            <div class="invalid-feedback" role="alert">
+                                <strong class="color: $red;"> {{ $errors->first('body') }} </strong>
                             </div>
                         @endif
                         <div class="form-group">
