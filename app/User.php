@@ -47,4 +47,10 @@ class User extends Authenticatable
     public function answers(){
         return $this->hasMany(Answer::class);
     }
+    public function getAvatarAttribute(){
+        $email = $this->mail;
+        //$default = "http://balosh.com/carparks/wp-content/uploads/2014/07/IMG_5436-495x400.jpg";
+        $size = 40;
+        return $grav_url = "https://www.gravatar.com/avatar/" . md5( strtolower( trim( $email ) ) ) . "?s=" . $size;
+    }
 }
