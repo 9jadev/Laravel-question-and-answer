@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Question extends Model
 {
+    use VotableTrait;
     protected $fillable = ['title','body'];
     public function user(){
         return $this->belongsTo(User::class);
@@ -15,6 +16,9 @@ class Question extends Model
         $this->attributes['title'] = $value;
         $this->attributes['slug'] = str_slug($value);
     }
+    // public function setBodyAttribute($value){
+    //     $this->attributes['body'] = clean($value);
+    // }
     public function getUrlAttribute(){
         return route('questions.show', $this->slug);
     }
@@ -33,7 +37,7 @@ class Question extends Model
     }
     public function getBodyHtmlAttribute()
     {
-        return \Parsedown::instance()->text($this->body);
+        return clean($this->bodyHtml());
     }
     public function answers(){
         return $this->hasMany(Answer::class);
@@ -55,13 +59,14 @@ class Question extends Model
     public function getFavoritesCountAttribute(){
         return $this->favorites->count();
     }
-    public function votes(){
-        return $this->morphToMany(User::class, 'votable');
+    public function getExcerptAttribute(){
+        return $this->excerpt(300); 
     }
-    public function upVotes(){
-        return $this->votes()->wherePivot('vote', 1);
-    }
-    public function downVotes(){
-        return $this->votes()->wherePivot('vote', -1);
+
+    public function excerpt($length){
+        return str_limit(strip_tags($this->bodyHtml()), $length);
+    }    
+    private function bodyHtml(){
+        return \Parsedown::instance()->text($this->body);
     }
 }
