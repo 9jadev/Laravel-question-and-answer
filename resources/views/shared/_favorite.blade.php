@@ -7,8 +7,8 @@ onclick="event.preventDefault(); document.getElementById('favorite-question-{{ $
 <span class="favorites-count">{{ $model->favorites_count }}</span>
 </a>
 <form id="favorite-question-{{ $model->id }}" action="/questions/{{ $model->id }}/favorites" method="POST" style="display:none;">
-@csrf
-@if ($model->is_favorited)
-    @method ('DELETE')
-@endif
+    @csrf
+    @if ($model->is_favorited)
+        @method ('DELETE')
+    @endif
 </form>

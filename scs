@@ -1,0 +1,143 @@
+[33mcommit 47c972c6a8103a7c4224ca8173578bac7bb0a899[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Soloski123 <ahambasolomon800@gmail.com>
+Date:   Wed Jan 1 04:10:34 2020 -0800
+
+     about to start vuejs
+
+[33mcommit f5d46a09e3affce553e65a936671d8cbe30afe48[m
+Author: Soloski123 <ahambasolomon800@gmail.com>
+Date:   Mon Dec 23 14:36:43 2019 -0800
+
+     changes made
+
+[33mcommit 072dec35e4ab61cbb524c4beef450c5822574b63[m
+Author: Soloski123 <ahambasolomon800@gmail.com>
+Date:   Mon Dec 16 12:37:34 2019 -0800
+
+    vote up and down both for Questions Answer
+
+[33mcommit 99bad2342fde38c708ed807dc0a898e6b12da912[m
+Author: Soloski123 <ahambasolomon800@gmail.com>
+Date:   Sat Dec 14 09:46:10 2019 -0800
+
+     adding best answer
+
+[33mcommit 7f93c927512c3d3198fb0bcf6945a4fd112ce79c[m
+Author: Soloski123 <ahambasolomon800@gmail.com>
+Date:   Mon Dec 9 23:51:11 2019 -0800
+
+     edit anwer
+
+[33mcommit 146b7ebbd0da3f9dccd4da7ca9c5c9d4ca0fc9a9[m
+Author: Soloski123 <ahambasolomon800@gmail.com>
+Date:   Mon Dec 9 12:14:08 2019 -0800
+
+     add answers
+
+[33mcommit bda6e6c0a4874f78e49ca39a4ade7d61a07cdb99[m
+Author: Soloski123 <ahambasolomon800@gmail.com>
+Date:   Sat Dec 7 11:40:07 2019 -0800
+
+     font awesome icons
+
+[33mcommit 13177ebcbf1f1bf1e3580c3257f690a5394cd194[m
+Author: Soloski123 <ahambasolomon800@gmail.com>
+Date:   Thu Dec 5 22:43:00 2019 -0800
+
+     generating fack answers
+
+[33mcommit 10ff25adc981bcf82a628d7d1726f87271c635f9[m
+Author: Soloski123 <ahambasolomon800@gmail.com>
+Date:   Thu Dec 5 22:03:53 2019 -0800
+
+     answer schema
+
+[33mcommit 59fcdf276d9a7708c6120322aa7f89f61969f919[m
+Author: Soloski123 <ahambasolomon800@gmail.com>
+Date:   Thu Dec 5 13:19:22 2019 -0800
+
+     implement authorization using policy
+
+[33mcommit 9b44565d2ad63683d7f65aece9c7ae9aa0130bf2[m
+Author: Soloski123 <ahambasolomon800@gmail.com>
+Date:   Thu Dec 5 10:04:40 2019 -0800
+
+     show question
+
+[33mcommit 75d790141cc5d7d645390e75595688a570ec94fe[m
+Author: Soloski123 <ahambasolomon800@gmail.com>
+Date:   Thu Dec 5 09:18:29 2019 -0800
+
+     question crud completed
+
+[33mcommit 06491947f5cfdd5577eb30d58407c6fa45f36f3f[m
+Author: Soloski123 <ahambasolomon800@gmail.com>
+Date:   Wed Dec 4 22:26:46 2019 -0800
+
+     edit is fixed
+
+[33mcommit 9b7d99430ec09c5e13cfedbbec563f2d421a8e30[m
+Author: Soloski123 <ahambasolomon800@gmail.com>
+Date:   Wed Dec 4 21:41:27 2019 -0800
+
+     making the question form submitable
+
+[33mcommit fed09808979cff258548870e71a315262adab426[m
+Author: Soloski123 <ahambasolomon800@gmail.com>
+Date:   Wed Dec 4 10:13:15 2019 -0800
+
+     question form
+
+[33mcommit 92fd5eeebc97300c1e04a3def8d8dc518db01422[m
+Author: Soloski123 <ahambasolomon800@gmail.com>
+Date:   Wed Dec 4 02:41:03 2019 -0800
+
+     add votes answer and view counter classes
+
+[33mcommit 0f2b01d990b15b5ceff54a0f7f07f2348e4ffcb2[m
+Author: Soloski123 <ahambasolomon800@gmail.com>
+Date:   Wed Dec 4 02:20:55 2019 -0800
+
+     stlyes for questions and answers
+
+[33mcommit 6ad2e9c8c66770fa6273854c953664eb6243edaf[m[33m ([m[1;32mday-2[m[33m)[m
+Author: Soloski123 <ahambasolomon800@gmail.com>
+Date:   Wed Dec 4 00:25:37 2019 -0800
+
+     this playing auto , time with mutator and accessors
+
+[33mcommit 146c56549a171ea41681576283f8c7581b3befa4[m
+Author: Soloski123 <ahambasolomon800@gmail.com>
+Date:   Tue Dec 3 11:20:21 2019 -0800
+
+     display questions
+
+[33mcommit 5869041f00e8c51ccd9febb177c4747e9f7b53c3[m
+Author: Soloski123 <ahambasolomon800@gmail.com>
+Date:   Tue Dec 3 10:23:32 2019 -0800
+
+     seeder for users and questions
+
+[33mcommit 010e91040b08cc3184841052eaa6c59b57beb1d9[m
+Author: Soloski123 <ahambasolomon800@gmail.com>
+Date:   Tue Dec 3 09:40:22 2019 -0800
+
+     my changes
+
+[33mcommit a3394aafe8ff350fc3da5bf5662c90633ece7f90[m[33m ([m[1;32mlesson-2[m[33m)[m
+Author: Soloski123 <ahambasolomon800@gmail.com>
+Date:   Tue Dec 3 09:31:23 2019 -0800
+
+     question modal
+
+[33mcommit 436465ebf4d48a21158934484853360a53d2cdc1[m
+Author: Soloski123 <ahambasolomon800@gmail.com>
+Date:   Tue Dec 3 09:04:40 2019 -0800
+
+     auth scafolding
+
+[33mcommit 3616e4daa3c9f111ab3942531704d25b3af8661e[m
+Author: Soloski123 <ahambasolomon800@gmail.com>
+Date:   Tue Dec 3 08:56:37 2019 -0800
+
+     first Commit Q & A

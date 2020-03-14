@@ -1,11 +1,8 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use App\Question;
 use Illuminate\Http\Request;
 use App\Http\Requests\AskQuestionRequest;
-
 class QuestionsController extends Controller
 {
     public function __construct()
@@ -22,8 +19,7 @@ class QuestionsController extends Controller
         $questions = Question::with('user')->latest()->paginate(5);
         return view('questions.index', compact('questions'));
     }
-
-    /**
+    /** run
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
@@ -33,7 +29,6 @@ class QuestionsController extends Controller
         $question = new Question();
         return view('questions.create', compact('question'));
     }
-
     /**
      * Store a newly created resource in storage.
      *
@@ -45,7 +40,6 @@ class QuestionsController extends Controller
         $request->user()->questions()->create($request->only('title', 'body'));
         return redirect()->route('questions.index')->with('success', 'Your question has been submitted');
     }
-
     /**
      * Display the specified resource.
      *
@@ -57,7 +51,6 @@ class QuestionsController extends Controller
         $question->increment('views');
         return view('questions.show', compact('question'));
     }
-
     /**
      * Show the form for editing the specified resource.
      *
@@ -69,7 +62,6 @@ class QuestionsController extends Controller
         $this->authorize("update", $question);
         return view('questions.edit', compact('question'));
     }
-
     /**
      * Update the specified resource in storage.
      *
@@ -83,7 +75,6 @@ class QuestionsController extends Controller
         $question->update($request->only('title','body'));
         return redirect('/questions')->with('success', " Your question has been updated.");
     }
-
     /**
      * Remove the specified resource from storage.
      *

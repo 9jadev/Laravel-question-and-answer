@@ -8,6 +8,7 @@ class Question extends Model
 {
     use VotableTrait;
     protected $fillable = ['title','body'];
+    protected $appends = ['created_date', 'is_favorited', 'favorites_count'];
     public function user(){
         return $this->belongsTo(User::class);
     }
@@ -25,7 +26,6 @@ class Question extends Model
     public function getCreatedDateAttribute(){
         return $this->created_at->diffForHumans();
     }
-
     public function getStatusAttribute(){
         if($this->answers_count > 0){
             if($this->best_answer_id){
