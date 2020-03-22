@@ -10,7 +10,7 @@ class AnswersController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('auth')->except('index');
     }
 
     /**
@@ -19,6 +19,10 @@ class AnswersController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+   
+    public function index(Question $question){
+        return $question->answers()->with('user')->simplePaginate(2);
+    }
     public function store(Question $question, Request $request)
     {
           
