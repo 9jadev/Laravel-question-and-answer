@@ -6,7 +6,6 @@
                 <div class="form-group">
                     <textarea class="form-control" v-model="body" rows="10" required></textarea>
                 </div>
-
                 <button class="btn btn-outline-secondary" :disabled="isInValid"> Update </button>
                 <button class="btn btn-outline-secondary" @click="cancel" type="button" Cancel> Cancel </button>
             </form>
@@ -14,9 +13,9 @@
                 <div v-html="bodyHtml"></div>
                 <div class="row">
                     <div class="col-4">
-                            <a v-if="authorize('modify', answer)" @click.prevent="edit" class="btn btn-sm btn-outline-info"> Edit</a>                  
-                            <button v-if="authorize('modify', answer)" @click="destroy" class="btn btn-sm btn-outline-danger">Delete</button>
-                        
+                        <a v-if="authorize('modify', answer)" @click.prevent="edit" class="btn btn-sm btn-outline-info"> Edit</a>                  
+                        <button v-if="authorize('modify', answer)" @click="destroy" class="btn btn-sm btn-outline-danger">Delete</button>
+    
                     </div>
                     <div class="col-4"></div>
                     <div class="col-4">
@@ -28,9 +27,11 @@
     </div>
 </template>
 <script>
+    import Vote from './Vote.vue';
+    import UserInfo from './UserInfo.vue';
     export default {
         props: ['answer'],
-        
+        components: { Vote, UserInfo },
         data () {
             return {
                 editing: false,
@@ -72,9 +73,7 @@
                              if (value == true) {
                                axios.delete(this.endpoint).then(
                                 res => {
-                                    $(this.$el).fadeOut(500, () => {
-                                        swal (res.data.message);
-                                    })
+                                   this.$emit('deleted')
                                 }) 
                             }
                         });

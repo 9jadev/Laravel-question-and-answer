@@ -12,6 +12,7 @@
     </div>
 </template>
 <script>
+import EventBus from '../event-bus';
 export default {
     props: ['answer'],
     data () {
@@ -29,8 +30,14 @@ export default {
                         icon: "success",
                     });
                 this.isBest = true;    
+                EventBus.$emit('accepted', this.id);
             })
         }
+    },
+    created(){
+        EventBus.$on('accepted', id => {
+            this.isBest = (id == this.id); 
+        })
     },
     computed: {
         canAccept () {
